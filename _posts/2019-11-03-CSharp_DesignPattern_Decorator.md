@@ -26,7 +26,7 @@ class ConcreteComponent{
 }
 
 class Decorator{
-    -component: Component
+    -_component: Component
     +Operation()
 }
 
@@ -73,7 +73,53 @@ Decorator <|-- ConcreteDecoratorB
 
 ### UML：
 
-![]({{ "/Images/Decorator Pattern/2019-11-03-23-45-35.png" | relative_url }})
+<div class="mermaid">
+classDiagram
+
+class Hamburger{
+    +Name: string
+    +Price: int
+}
+
+class Cheeseburger{
+    +Name: string
+    +Price: int
+}
+
+class BigMac{
+    +Name: string
+    +Price: int
+}
+
+class BurgerDecoratorBase{
+    -_hamburger: Hamburger
+    +Name: string
+    +Price: int
+}
+
+class BeefDecorator{
+    +Name: string
+    +Price: int
+}
+
+class LettuceDecorator{
+    +Name: string
+    +Price: int
+}
+
+class PicklesDecorator{
+    +Name: string
+    +Price: int
+}
+
+Hamburger <|-- Cheeseburger
+Hamburger <|-- BigMac
+Hamburger <|-- BurgerDecoratorBase
+Hamburger <--o  BurgerDecoratorBase
+BurgerDecoratorBase <|-- BeefDecorator
+BurgerDecoratorBase <|-- LettuceDecorator
+BurgerDecoratorBase <|-- PicklesDecorator
+</div>
 
 ### 定義一漢堡虛擬類別 (Component)：
 ~~~c#
