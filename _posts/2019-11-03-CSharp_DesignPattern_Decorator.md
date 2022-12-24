@@ -75,8 +75,11 @@ Decorator <|-- ConcreteDecoratorB
 
 ![]({{ "/Images/Decorator Pattern/2019-11-03-23-45-35.png" | relative_url }})
 
-### 定義一漢堡虛擬類別：
+### 定義一漢堡虛擬類別 (Component)：
 ~~~c#
+/// <summary>
+/// Component
+/// </summary>
 public abstract class Hamburger
 {
     public abstract string Name { get; }
@@ -85,8 +88,11 @@ public abstract class Hamburger
 }
 ~~~
 
-### 定義兩個基本款漢堡：起司堡、大麥克：
+### 定義兩個基本款漢堡：起司堡、大麥克 (ConcreteComponent)：
 ~~~c#
+/// <summary>
+/// ConcreteComponent
+/// </summary>
 public class Cheeseburger : Hamburger
 {
     public override string Name
@@ -100,7 +106,10 @@ public class Cheeseburger : Hamburger
     }
 }
 
-class BigMac : Hamburger
+/// <summary>
+/// ConcreteComponent
+/// </summary>
+public class BigMac : Hamburger
 {
     public override string Name
     {
@@ -114,8 +123,11 @@ class BigMac : Hamburger
 }
 ~~~
 
-### 裝飾類別，繼承漢堡類別：
+### 裝飾類別，繼承漢堡類別 (Decorator)：
 ~~~c#
+/// <summary>
+/// Decorator
+/// </summary>
 public abstract class BurgerDecoratorBase : Hamburger
 {
     protected Hamburger _hamburger;
@@ -127,9 +139,11 @@ public abstract class BurgerDecoratorBase : Hamburger
 }
 ~~~
 
-### 實際要加入漢堡的東西，繼承裝飾類別：
+### 實際要加入漢堡的東西，繼承裝飾類別 (ConcreteDecorator)：
 ~~~c#
-// 加牛肉
+/// <summary>
+/// ConcreteDecorator
+/// </summary>
 public class BeefDecorator : BurgerDecoratorBase
 {
     public BeefDecorator(Hamburger hamburger) : base(hamburger)
@@ -147,7 +161,9 @@ public class BeefDecorator : BurgerDecoratorBase
     }
 }
 
-// 加生菜
+/// <summary>
+/// ConcreteDecorator
+/// </summary>
 public class LettuceDecorator : BurgerDecoratorBase
 {
     public LettuceDecorator(Hamburger hamburger) : base(hamburger)
@@ -165,7 +181,9 @@ public class LettuceDecorator : BurgerDecoratorBase
     }
 }
 
-// 加酸黃瓜
+/// <summary>
+/// ConcreteDecorator
+/// </summary>
 public class PicklesDecorator : BurgerDecoratorBase
 {
     public PicklesDecorator(Hamburger hamburger) : base(hamburger)
@@ -186,22 +204,22 @@ public class PicklesDecorator : BurgerDecoratorBase
 
 ### client 端：
 ~~~c#
-Hamburger burger1 = new Cheeseburger(); // 80
-burger1 = new BeefDecorator(burger1); // +20
-burger1 = new LettuceDecorator(burger1); // +5
-burger1 = new PicklesDecorator(burger1); // +5
-burger1 = new BeefDecorator(burger1); // +20
+Hamburger burger1 = new Cheeseburger();     // +80
+burger1 = new BeefDecorator(burger1);       // +20
+burger1 = new LettuceDecorator(burger1);    // +5
+burger1 = new PicklesDecorator(burger1);    // +5
+burger1 = new BeefDecorator(burger1);       // +20
 
-Console.WriteLine("burger1 Name: " + burger1.Name);
-Console.WriteLine("burger1 Price: " + burger1.Price);
+Console.WriteLine("burger1 Name: " + burger1.Name);     // burger1 Name: Cheeseburger, add Beef, add Lettuce, add Pickles, add Beef
+Console.WriteLine("burger1 Price: " + burger1.Price);   // burger1 Price: 130
 Console.WriteLine("======================================");
 
-Hamburger burger2 = new BigMac(); // 100
-burger2 = new LettuceDecorator(burger2); // +5
-burger2 = new PicklesDecorator(burger2); // +5
+Hamburger burger2 = new BigMac();           // +100
+burger2 = new LettuceDecorator(burger2);    // +5
+burger2 = new PicklesDecorator(burger2);    // +5
 
-Console.WriteLine("burger2 Name: " + burger2.Name);
-Console.WriteLine("burger2 Price: " + burger2.Price);
+Console.WriteLine("burger2 Name: " + burger2.Name);     // burger2 Name: BigMac, add Lettuce, add Pickles
+Console.WriteLine("burger2 Price: " + burger2.Price);   // burger2 Price: 110
 Console.WriteLine("======================================");
 ~~~
 
@@ -214,9 +232,3 @@ burger2 Name: BigMac, add Lettuce, add Pickles
 burger2 Price: 110
 ======================================
 ```
-
-----------
-
-[[C# 系列文章]](https://yu-qiao-hong.github.io/tags/#C%23)
-
-[[Design Pattern 系列文章]](https://yu-qiao-hong.github.io/tags/#Design+Pattern)

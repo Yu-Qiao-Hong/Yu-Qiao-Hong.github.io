@@ -12,8 +12,8 @@ google-scholar:   # e.g. "WXAAOb0AAAAJ"
 instagram:
 hacker-news:
 keybase:
-linkedin: https://www.linkedin.com/in/yuqiao-h-b16574a6/
-mail: "iverson741217@gmail.com"            # e.g. "sam@mail.com"
+linkedin: yuqiao-h-b16574a6       # e.g. "yuqiao-h-b16574a6"
+mail: "iverson741217@gmail.com"   # e.g. "sam@mail.com"
 map:              # e.g. "34.0886/-118.3191"
 mastodon:         # e.g. "fostodon.org/@sam"
 matrix:           # e.g. "@sam:matrix.org"
