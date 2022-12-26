@@ -18,27 +18,7 @@ tags: [C#, Design Pattern]
 
 ## UML
 
-<div class="mermaid">
-classDiagram
-
-class Target{
-    <<interface>>
-    +Operation()
-}
-
-class Adapter{
-    +Operation()
-}
-
-class Adaptee{
-    +SpecificOperation()
-}
-
-Target  <|-- Adapter
-Adaptee <--  Adapter
-Client --> Target
-
-</div>
+![]({{ "/images/CSharp_DesignPattern_Adapter/class diagram.png" | relative_url}})
 
 ![]({{ "/images/CSharp_DesignPattern_Adapter/real-word-adapter.webp" | relative_url}})
 
