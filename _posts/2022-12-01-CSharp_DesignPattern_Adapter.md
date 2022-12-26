@@ -21,24 +21,23 @@ tags: [C#, Design Pattern]
 <div class="mermaid">
 classDiagram
 
-Target  <|-- Adapter
-Adaptee <--  Adapter
-Client --> Target
-
 class Target{
     <<interface>>
     +Operation()
 }
-note for Target "client interface"
 
 class Adapter{
     +Operation()
 }
-note for Adapter "adaptee.SpecificOperation()"
 
 class Adaptee{
     +SpecificOperation()
 }
+
+Target  <|-- Adapter
+Adaptee <--  Adapter
+Client --> Target
+
 </div>
 
 ![]({{ "/images/CSharp_DesignPattern_Adapter/real-word-adapter.webp" | relative_url}})
@@ -65,9 +64,6 @@ class Adaptee{
 
 ### UML：
 
-<div class="mermaid">
-
-</div>
 
 ### 定義一漢堡虛擬類別 (Component)：
 ~~~c#
