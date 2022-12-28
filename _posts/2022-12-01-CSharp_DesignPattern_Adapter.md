@@ -6,7 +6,7 @@ modified: 2022-12-01
 tags: [C#, Design Pattern]
 ---
 
-## 定義/使用時機
+## 目的/使用時機
 
 * 讓原來不兼容的介面可以互相偕同工作。
 
@@ -19,6 +19,31 @@ tags: [C#, Design Pattern]
 ## UML
 
 ![]({{ "/images/CSharp_DesignPattern_Adapter/class diagram.png" | relative_url}})
+
+{::comment}
+<div class="mermaid">
+classDiagram
+
+Client --> Target
+Target  <|-- Adapter
+Adaptee <--  Adapter
+
+class Target{
+    <<interface>>
+    +Operation()
+}
+note for Target "client interface"
+
+class Adapter{
+    +Operation()
+}
+note for Adapter "adaptee.SpecificOperation()"
+
+class Adaptee{
+    +SpecificOperation()
+}
+</div>
+{:/comment}
 
 ## Real Word Example
 
