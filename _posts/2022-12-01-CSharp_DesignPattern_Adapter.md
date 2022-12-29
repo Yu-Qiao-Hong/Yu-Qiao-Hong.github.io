@@ -20,11 +20,11 @@ tags: [C#, Design Pattern]
 
 ![]({{ "/images/CSharp_DesignPattern_Adapter/class diagram.png" | relative_url}})
 
-{::comment}
+<!---
 <div class="mermaid">
 classDiagram
 
-Client --> Target
+Target  <-- Client
 Target  <|-- Adapter
 Adaptee <--  Adapter
 
@@ -43,7 +43,7 @@ class Adaptee{
     +SpecificOperation()
 }
 </div>
-{:/comment}
+-->
 
 ## Real Word Example
 
