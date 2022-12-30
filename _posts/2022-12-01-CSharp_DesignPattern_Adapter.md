@@ -6,6 +6,8 @@ modified: 2022-12-01
 tags: [C#, Design Pattern]
 ---
 
+![]({{ "/images/CSharp_DesignPattern_Adapter/adapter.png" | relative_url}})
+
 ## 目的/使用時機
 
 * 讓原來不兼容的介面可以互相偕同工作。
@@ -18,7 +20,7 @@ tags: [C#, Design Pattern]
 
 ## UML
 
-![]({{ "/images/CSharp_DesignPattern_Adapter/class diagram.png" | relative_url}})
+![]({{ "/images/CSharp_DesignPattern_Adapter/class-diagram.png" | relative_url}})
 
 <!---
 <div class="mermaid">
