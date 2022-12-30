@@ -22,7 +22,7 @@ tags: [C#, Design Pattern]
 
 ## Real Word Example
 
-{% include aligner.html images="/images/CSharp_DesignPattern_Adapter/class-diagram.png,/images/CSharp_DesignPattern_Adapter/real-word-adapter.webp" column=2 %}
+{% include aligner.html images="../../images/CSharp_DesignPattern_Adapter/class-diagram.png,../../images/CSharp_DesignPattern_Adapter/real-word-adapter.webp" column=2 %}
 
 ----------
 
