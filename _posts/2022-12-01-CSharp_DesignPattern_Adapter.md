@@ -6,6 +6,12 @@ modified: 2022-12-01
 tags: [C#, Design Pattern]
 ---
 
+## Real Word Example
+
+{% include aligner.html images="../../images/CSharp_DesignPattern_Adapter/adapter.png,../../images/CSharp_DesignPattern_Adapter/real-word-adapter.webp" column=2 %}
+
+---
+
 ## 目的/使用時機
 
 * 讓原來不兼容的介面可以互相偕同工作。
@@ -19,10 +25,6 @@ tags: [C#, Design Pattern]
 ## UML
 
 ![]({{ "/images/CSharp_DesignPattern_Adapter/class-diagram.png" | relative_url}})
-
-## Real Word Example
-
-{% include aligner.html images="../../images/CSharp_DesignPattern_Adapter/class-diagram.png,../../images/CSharp_DesignPattern_Adapter/real-word-adapter.webp" column=2 %}
 
 ----------
 
