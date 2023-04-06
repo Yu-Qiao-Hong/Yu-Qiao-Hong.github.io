@@ -14,11 +14,11 @@ tags: [C#, Design Pattern]
 
 ## 目的/使用時機
 
-* 讓原來不兼容的介面可以互相偕同工作。
+* 讓原來不兼容的介面可以互相偕同工作。(如無法修改或增加內容的 existing class， 或第三方 class，視為 adaptee)
 
-* 將既有的介面轉換為客戶端能使用的介面。
+* 將既有的介面轉換為客戶端能使用的介面。(保留/不修改 client 端使用方式)
 
-* 實作方式為 wrap 既有的 class 成新的 class。
+* 實作方式為 wrap 既有的 class 成新的 class (adapter)。
 
 ----------
 
