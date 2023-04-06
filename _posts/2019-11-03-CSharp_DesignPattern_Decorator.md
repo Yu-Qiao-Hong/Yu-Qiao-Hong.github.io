@@ -10,10 +10,31 @@ tags: [C#, Design Pattern]
 
 * 動態的對物件增加額外的職責，且不需修改既有的程式。
 
+* 使用**合成**的方式動態增加職責，而非使用繼承(繼承是靜態的，且繼承相比合成有更高的耦合性)。
+
+* 把一個禮物先裝在盒子裡，盒子外面再包一層包裝紙，再綁上絲帶 = 透過一層一層包裝(ConcreteDecorator)的方式把禮物(ConcreteComponent)包裝起來。
+
+* 也算是一種 wrapper 的作法。
+
+----------
+
+## Participants
+
+* Component: 用來定義動態附加的介面，給 wrappers 跟 被 wrap 的物件使用。
+
+* ConcreteComponent: 要被 warp 的物件(可以被附加責任的物件)。
+
+* Decorator: 裡面會有一個被 wrap 的物件。
+
+* ConcreteDecorator: 向 Component 添加職責的物件，再調用自己的 Method 前先調用父類別的。
+
 ----------
 
 ## UML
 
+![]({{ "/images/CSharp_DesignPattern_Decorator/class-diagram.png" | relative_url}})
+
+<!-- 
 <div class="mermaid">
 classDiagram
 
@@ -44,14 +65,15 @@ Component <--o  Decorator
 Decorator <|-- ConcreteDecoratorA
 Decorator <|-- ConcreteDecoratorB
 </div>
+-->
 
 ----------
 
 ## 優點
 
-* 使用**合成**的方式動態地增職責，而非只用繼承。
+* 使用合成取代繼承，提供更多彈性。
 
-* 具體類別與裝飾類別獨立設計，可依據需求動態增加裝飾的職責，且不需修改原有具體類別，符合開放封閉原則。
+* 具體類別(ConcreteComponent)與裝飾類別獨立設計，可依據需求動態增加裝飾的職責，且不需修改原有具體類別，符合開放封閉原則。
 
 * 把類別的核心職責與裝飾功能區分開來，符合單一職責原則。
 
@@ -75,6 +97,9 @@ Decorator <|-- ConcreteDecoratorB
 
 ### UML：
 
+![]({{ "/images/CSharp_DesignPattern_Decorator/hambuger-class-diagram" | relative_url}})
+
+<!-- 
 <div class="mermaid">
 classDiagram
 
@@ -122,6 +147,7 @@ BurgerDecoratorBase <|-- BeefDecorator
 BurgerDecoratorBase <|-- LettuceDecorator
 BurgerDecoratorBase <|-- PicklesDecorator
 </div>
+-->
 
 ### 定義一漢堡虛擬類別 (Component)：
 ~~~c#
