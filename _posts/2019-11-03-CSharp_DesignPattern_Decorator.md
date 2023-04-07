@@ -22,9 +22,9 @@ tags: [C#, Design Pattern]
 
 * Component: 用來定義動態附加的介面，給 wrappers 跟 被 wrap 的物件使用。
 
-* ConcreteComponent: 要被 warp 的物件(可以被附加責任的物件)。
+* ConcreteComponent: 要被 warp 的物件(可以被附加責任的物件)，可以先給予初始化的內容。
 
-* Decorator: 裡面會有一個被 wrap 的物件。
+* Decorator: 裡面會有一個被 wrap 的物件。(一般是使用建構子將帶入 ConcreteComponent)
 
 * ConcreteDecorator: 向 Component 添加職責的物件，再調用自己的 Method 前先調用父類別的。
 
@@ -34,7 +34,7 @@ tags: [C#, Design Pattern]
 
 ![]({{ "/images/CSharp_DesignPattern_Decorator/class-diagram.png" | relative_url}})
 
-<!-- 
+<!--
 <div class="mermaid">
 classDiagram
 
@@ -99,7 +99,7 @@ Decorator <|-- ConcreteDecoratorB
 
 ![]({{ "/images/CSharp_DesignPattern_Decorator/hambuger-class-diagram" | relative_url}})
 
-<!-- 
+<!--
 <div class="mermaid">
 classDiagram
 
