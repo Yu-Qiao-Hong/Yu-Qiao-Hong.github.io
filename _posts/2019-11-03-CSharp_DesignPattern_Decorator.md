@@ -2,7 +2,7 @@
 layout: post
 title: C# Decorator Pattern
 author: Yu-Qiao Hong
-modified: 2022-12-24
+modified: 2019-11-03
 tags: [C#, Design Pattern]
 ---
 
