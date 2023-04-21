@@ -14,7 +14,9 @@ tags: [C#]
 void PrintNum(int[] ary)
 {
     foreach (int n in ary)
+    {
         Console.WriteLine(n.ToString());
+    }
 }
 ~~~
 
@@ -39,7 +41,7 @@ PrintNum(myAry2);
 
 ## Params
 
-修改一下上面的 method，再帶入參數前面加上"**params**"
+修改一下上面的 method，再帶入參數前面加上 "**params**"
 
 ~~~c#
 void PrintNum(params int[] ary)
@@ -79,6 +81,5 @@ void PrintNum(string name, params int[] ary)
 ~~~c#
 int[] myAry = { 1, 2, 3, 4, 5 };
 PrintNum("Iverson", myAry);
-
 PrintNum("Hong", 7, 8, 9);
 ~~~

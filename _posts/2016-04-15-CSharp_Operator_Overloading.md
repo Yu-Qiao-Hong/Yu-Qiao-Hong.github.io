@@ -7,7 +7,7 @@ tags: [C#]
 ---
 ## 使用時機
 
-定義一個"BankAccount"class，描述這銀行帳戶的擁有者及其金額
+定義一個 BankAccount class，描述這銀行帳戶的擁有者及其金額
 
 ~~~csharp
 class BankAccount
@@ -65,13 +65,12 @@ string name = account3;
 
 ## Operator Overloading
 
-在"BankAccount"新增幾個 method，讓上面的程式碼可以正常的運作
+在 BankAccount 新增幾個 method，讓上面的程式碼可以正常的運作
 
 **1. 我想要比較兩個戶頭裡的錢誰比較多。**
 
 ~~~csharp
 // if (account1 > account2)
-
 public static bool operator >(BankAccount left, BankAccount right)
 {
     if (left._money > right._money)
@@ -93,7 +92,6 @@ public static bool operator <(BankAccount left, BankAccount right)
 
 ~~~csharp
 // BankAccount account3 = account1 + account2;
-
 public static BankAccount operator +(BankAccount left, BankAccount right)
 {
     return new BankAccount(left._owner + "+" + right._owner, left._money + right._money);
@@ -104,7 +102,6 @@ public static BankAccount operator +(BankAccount left, BankAccount right)
 
 ~~~csharp
 // account3 = account3 + 500;
-
 public static BankAccount operator +(BankAccount left, int right)
 {
     return new BankAccount(left._owner, left._money + right);
@@ -115,11 +112,10 @@ public static BankAccount operator +(BankAccount left, int right)
 
 ~~~csharp
 // string name = account3;
-
 public static implicit operator string(BankAccount account)
 {
     return account._owner;
 }
 ~~~
 
-這邊需要注意的是，沒有辦法只寫**"operator >"**method，需把另一個**"operator <"**也實做出來才可build過。
+這邊需要注意的是，沒有辦法只寫 **"operator >"** method，需把另一個 **"operator <"** 也實做出來才可 build 過。
