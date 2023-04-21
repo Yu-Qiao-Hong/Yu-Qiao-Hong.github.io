@@ -8,7 +8,7 @@ tags: [Design Pattern]
 
 程式設計上遵循 SOLID 這五項基本原則，可寫出好維護易擴充的程式架構
 
-## Single Responsibility Principle (SRP)##
+## Single Responsibility Principle (SRP)
 
 **單一職責**
 
@@ -20,7 +20,7 @@ tags: [Design Pattern]
 
 ---
 
-## Open Closed Principle (OCP)##
+## Open Closed Principle (OCP)
 
 **開放封閉原則**
 
@@ -33,7 +33,7 @@ tags: [Design Pattern]
 
 ---
 
-## Liskov Substitution Principle (LSP)##
+## Liskov Substitution Principle (LSP)
 
 **Liskov 替換原則**
 
@@ -50,7 +50,7 @@ tags: [Design Pattern]
 
 ---
 
-## Interface Segregation Principle (ISP)##
+## Interface Segregation Principle (ISP)
 
 **介面隔離原則**
 
@@ -64,7 +64,7 @@ tags: [Design Pattern]
 
 例如 C# 中的 List class 定義
 
-~~~C#
+~~~csharp
 public class List<T> : IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable, IList, ICollection, IReadOnlyList<T>, IReadOnlyCollection<T>
 {
 
@@ -73,7 +73,7 @@ public class List<T> : IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable, IL
 
 ---
 
-## Dependency inversion principle (DIP)##
+## Dependency inversion principle (DIP)
 
 **依賴反轉原則**
 
