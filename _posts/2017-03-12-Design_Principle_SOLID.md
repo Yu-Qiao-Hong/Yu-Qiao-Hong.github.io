@@ -18,7 +18,7 @@ tags: [Design Pattern]
 
 一個 class 只專心做一件事。如一個 class 要負責過多職責，等於把這些職責耦合在一起，當其中一個職責變化或修改時，其他的職責可能發生意想不到的錯誤。
 
----
+----------
 
 ## Open Closed Principle (OCP)
 
@@ -31,7 +31,7 @@ tags: [Design Pattern]
 理想上是這樣，但如何做到呢？首先要先清楚地建立程式模組間的上下階層關係，如 A 模組使用到 B 模組，A->B。
 可使用抽象介面來隔離上下階層的關係，使得 A 不直接依賴 B，而是透過介面的方式來操作 B(高階模組不應該依賴於低階模組，應該依賴抽象)。
 
----
+----------
 
 ## Liskov Substitution Principle (LSP)
 
@@ -48,7 +48,7 @@ tags: [Design Pattern]
 
 解決方法應為兩者(鳥/企鵝、矩形/正方形)都繼承一共同介面，也就是上下階層不互相依賴，轉而依賴介面，其道理與開放封閉原則一致。
 
----
+----------
 
 ## Interface Segregation Principle (ISP)
 
@@ -71,7 +71,7 @@ public class List<T> : IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable, IL
 }
 ~~~
 
----
+----------
 
 ## Dependency inversion principle (DIP)
 
