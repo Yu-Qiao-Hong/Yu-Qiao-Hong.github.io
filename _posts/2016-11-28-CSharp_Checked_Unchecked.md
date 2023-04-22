@@ -4,7 +4,7 @@ title: C# checked/unchecked
 author: Yu-Qiao Hong
 modified: 2016-11-28
 tags: [C#]
----　　　　　　　　　　　
+---
 
 "**checked**" 關鍵字是用來檢查整數類資料型別(Integral Type)進行算術運算或轉換時的溢位檢查。在一般情況下，並不會檢查數值是否發生 overfolw，若希望在執行階段判斷是否產生 overfolw 則可使用 "**checked**" 關鍵字。
 
