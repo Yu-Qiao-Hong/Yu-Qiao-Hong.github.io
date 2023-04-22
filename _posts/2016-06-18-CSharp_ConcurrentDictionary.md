@@ -14,7 +14,7 @@ tags: [C#]
 2. 一個印出現在 Dictionary 內有多少數量
 3. 一個刪除 Dictionary 內第一個 item
 
-## 沒有thread-safe的範例
+## 沒有 thread-safe 的範例
 
 ~~~csharp
 static void Main(string[] args)
@@ -60,7 +60,7 @@ static void Main(string[] args)
 
 ----------
 
-## 使用lock
+## 使用 lock
 
 ~~~csharp
 static void Main(string[] args)
@@ -121,7 +121,7 @@ static void Main(string[] args)
 
 ----------
 
-## 使用ConcurrentDictionary
+## 使用 ConcurrentDictionary
 
 ~~~csharp
 static void Main(string[] args)
