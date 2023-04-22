@@ -4,7 +4,7 @@ title: C# 成員變數(Member Variables)建立初始值的時間點
 author: Yu-Qiao Hong
 modified: 2016-08-07
 tags: [C#, Effective C#]
----　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+---
 
 在 Effective C# 中建議在宣告成員變數時就直接給予初始值，此作法可避免在程式中使用到未初始化的變數。在宣告時給予初始值，其執行順序比執行此件類別建構子還之前：
 

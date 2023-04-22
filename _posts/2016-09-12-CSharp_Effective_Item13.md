@@ -4,7 +4,7 @@ title: C# 在初始化時使用靜態成員以及靜態建構子
 author: Yu-Qiao Hong
 modified: 2016-09-12
 tags: [C#, Effective C#]
----　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+---
 
 在 C# 中最常見的使用 singleton 方式為：
 
